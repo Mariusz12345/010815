@@ -15,7 +15,7 @@ public class LiczbyPodane {
 			int liczby = wczytaneLiczby.nextInt();
 			if(liczby > zakresLiczb){
 				System.out.println("Liczba byla z poza zakresu");
-				
+				continue;
 			}
 			liczbyPodanePrzezUzytkownika.add(liczby);
 		}
