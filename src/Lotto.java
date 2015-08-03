@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-public final class Lotto {
+public class Lotto {
 
 	public static void main(String[] args) {
 
-		int ilosciLiczb = 10;
+		int ilosciLiczb = 6;
 		int zakresWylosowanychLiczb = 30;
 		boolean wynik;
 
