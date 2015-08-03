@@ -6,20 +6,24 @@ public class Lotto {
 
 	public static void main(String[] args) {
 
-		int ilosciLiczb = 6;
-		int zakresWylosowanychLiczb = 30;
+		int ilosciLiczb = 3;
+		int zakresWylosowanychLiczb = 5;
 		boolean wynik;
 
-		LiczbyWylosowane liczbywylosowane = new LiczbyWylosowane();
+		//LiczbyWylosowane liczbywylosowane = new LiczbyWylosowane();
 		LiczbyPodane liczbyWybrane = new LiczbyPodane();
 		PorownanieLiczb porownywanieliczb = new PorownanieLiczb();
+		Loteriada  loteriada = new Loteriada(Liczby.liczbylos);
+		
+		
 
 		List<Integer> listaWygenerowanychLiczb = new ArrayList<>();
 		List<Integer> listaLiczbWybranychPrzezUzytkownika = new ArrayList<>();
+		
+		listaWygenerowanychLiczb= loteriada.getTypliczb().liczbylos.getLos().GenerujLiczby(ilosciLiczb, zakresWylosowanychLiczb);
 
-		listaWygenerowanychLiczb = liczbywylosowane.GenerujLiczby(ilosciLiczb, zakresWylosowanychLiczb);
-		listaLiczbWybranychPrzezUzytkownika = liczbyWybrane.LiczbyWybrane(ilosciLiczb);
-
+	//	listaWygenerowanychLiczb = liczbywylosowane.GenerujLiczby(ilosciLiczb, zakresWylosowanychLiczb);
+		listaLiczbWybranychPrzezUzytkownika = liczbyWybrane.LiczbyWybrane(ilosciLiczb,zakresWylosowanychLiczb);
 		wynik = porownywanieliczb.Porownaj(listaWygenerowanychLiczb, listaLiczbWybranychPrzezUzytkownika, ilosciLiczb);
 
 		System.out.println("Liczby wylosowane" + listaWygenerowanychLiczb);
