@@ -10,20 +10,15 @@ public class Lotto {
 		int zakresWylosowanychLiczb = 5;
 		boolean wynik;
 
-		//LiczbyWylosowane liczbywylosowane = new LiczbyWylosowane();
-		LiczbyPodane liczbyWybrane = new LiczbyPodane();
+		LiczbyWylosowane liczbywylosowane = new LiczbyWylosowane();
+		LiczbyUzytkownikow klientA = new LiczbyUzytkownikow("Jan", "Kowalski", 3, 5);
 		PorownanieLiczb porownywanieliczb = new PorownanieLiczb();
-		Loteriada  loteriada = new Loteriada(Liczby.liczbylos);
-		
-		
 
 		List<Integer> listaWygenerowanychLiczb = new ArrayList<>();
 		List<Integer> listaLiczbWybranychPrzezUzytkownika = new ArrayList<>();
-		
-		listaWygenerowanychLiczb= loteriada.getTypliczb().liczbylos.getLos().GenerujLiczby(ilosciLiczb, zakresWylosowanychLiczb);
 
-	//	listaWygenerowanychLiczb = liczbywylosowane.GenerujLiczby(ilosciLiczb, zakresWylosowanychLiczb);
-		listaLiczbWybranychPrzezUzytkownika = liczbyWybrane.LiczbyWybrane(ilosciLiczb,zakresWylosowanychLiczb);
+		listaWygenerowanychLiczb = liczbywylosowane.GenerujLiczby(ilosciLiczb, zakresWylosowanychLiczb);
+		listaLiczbWybranychPrzezUzytkownika = klientA.LiczbyWybrane();
 		wynik = porownywanieliczb.Porownaj(listaWygenerowanychLiczb, listaLiczbWybranychPrzezUzytkownika, ilosciLiczb);
 
 		System.out.println("Liczby wylosowane" + listaWygenerowanychLiczb);
@@ -31,9 +26,9 @@ public class Lotto {
 
 		if (wynik == true)
 
-			System.out.println("Gratulacje wygrales");
+			System.out.println(klientA.getImie() + " Gratulacje wygrales");
 		else
-			System.out.println("Sproboj ponownie");
+			System.out.println(klientA.getImie() + " Sproboj ponownie");
 
 	}
 

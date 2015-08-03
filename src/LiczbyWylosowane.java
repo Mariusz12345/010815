@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class LiczbyWylosowane {
 
+	
 	public List<Integer> GenerujLiczby(int iloscLiczb, int zakresLiczb) {
 
 		List<Integer> LiczbyWylosowane = new ArrayList<>();
@@ -13,7 +14,6 @@ public class LiczbyWylosowane {
 			int los = r.nextInt(zakresLiczb);
 			LiczbyWylosowane.add(los);
 		}
-
 		return LiczbyWylosowane;
 
 	}

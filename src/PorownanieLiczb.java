@@ -9,9 +9,7 @@ public class PorownanieLiczb {
 
 			if (liczbyWylosowane.get(i) != liczbyPodane.get(i))
 				return false;
-
 		}
-
 		return true;
 	}
 
