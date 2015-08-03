@@ -10,7 +10,7 @@ public class LiczbyWylosowane {
 		Random r = new Random();
 		while (LiczbyWylosowane.size() < iloscLiczb) {
 
-			int los = r.nextInt(zakresLiczb) + 1;
+			int los = r.nextInt(zakresLiczb);
 			LiczbyWylosowane.add(los);
 		}
 
